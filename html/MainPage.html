@@ -1,25 +1,159 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
+    <!-- Configuración básica del documento -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Main Page</title>
+    <!-- Fuente personalizada -->
+    <link href="https://fonts.googleapis.com/css2?family=Ovo&display=swap" rel="stylesheet">
 
-    <!-- 🔥 FAVICON (logo en la pestaña del navegador) -->
-    <!-- ../ significa "subir una carpeta" (de html → raíz) -->
-    <!-- luego entra a /img -->
-    <link rel="icon" href="../img/Logo_Noctis.png" type="image/png">
+    <!-- Iconos Remix -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
 
+    <!-- Título del navegador -->
+    <title>Noctis</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="../img/favicon-32x32.png?v=2">
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="../css/MainPage.css">
 </head>
-<body>
-    <header>
-        <!-- Título principal de la página -->
-        <h1>Bienvenido a la Página Principal</h1>
 
-        <!-- Imagen dentro de la página -->
-        <!-- Usa la misma lógica de rutas -->
-        <img src="../img/Logo_Noctis.png" alt="Logo" width="200">
+<body>
+
+    <!-- Encabezado principal -->
+    <header class="header" role="banner">
+
+        <!-- Contenedor principal del header -->
+        <div class="header__container">
+
+            <!-- Logo de la marca -->
+            <div class="header__logo">
+                <a href="./MainPage.html" class="header__brand-link">
+                    <h1 class="header__brand">Noctis</h1>
+                </a>
+            </div>
+
+            <!-- Barra de búsqueda -->
+            <div class="header__search">
+                <div class="search">
+                    <i class="ri-search-line search__icon"></i>
+                    <input type="text" class="search__input" placeholder="Buscar Productos ...">
+                    <i class="ri-mic-line search__icon search__icon--mic"></i>
+                </div>
+            </div>
+
+            <!-- Botón menú hamburguesa (solo móvil) -->
+            <button type="button" class="header__menu-toggle" id="menuToggle" aria-label="Abrir menú">
+                <i class="ri-menu-line"></i>
+            </button>
+
+            <!-- Acciones del header -->
+            <div class="header__actions">
+
+                <!-- Usuario -->
+                <div class="action action--user">
+
+                    <!-- Botón de usuario -->
+                    <button type="button" class="action__icon" id="userBtn" aria-label="Abrir menú de usuario">
+                        <i class="ri-user-3-line"></i>
+                    </button>
+
+                    <!-- Menú desplegable de usuario -->
+                    <div class="user-menu" id="userMenu">
+
+                        <!-- Saludo -->
+                        <div class="user-menu__header">
+                            <p id="userGreetingDesktop">
+                                Hola, <br><strong>Invitado</strong>
+                            </p>
+                        </div>
+
+                        <!-- Opciones -->
+                        <ul class="user-menu__list">
+
+                            <li class="user-menu__item">
+                                <a href="#">
+                                    <i class="ri-user-settings-line"></i> Mi Perfil
+                                </a>
+                            </li>
+
+                            <li class="user-menu__item">
+                                <a href="#">
+                                    <i class="ri-history-line"></i> Mis Pedidos
+                                </a>
+                            </li>
+                            <!-- Separador -->
+                            <hr>
+                            <!-- Login -->
+                            <li class="user-menu__item" id="itemLoginDesktop">
+                                <a href="#">
+                                    <i class="ri-login-circle-line"></i> Iniciar Sesión
+                                </a>
+                            </li>
+
+                            <!-- Logout -->
+                            <li class="user-menu__item" id="itemLogoutDesktop">
+                                <a href="#" class="user-menu__logout">
+                                    <i class="ri-logout-box-r-line"></i> Cerrar Sesión
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Carrito -->
+                <div class="action action--cart cart-container">
+                    <i class="ri-shopping-cart-2-line action__icon"></i>
+                    <span class="cart__badge">0</span>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Menú móvil -->
+        <nav class="header__mobile-menu" id="mobileMenu">
+
+            <!-- Saludo móvil -->
+            <p class="header__greeting" id="userGreetingMobile">
+                Hola, <strong>Invitado</strong>
+            </p>
+
+            <!-- Enlaces -->
+            <a href="#" class="header__link">
+                <i class="ri-user-settings-line"></i> Mi Perfil
+            </a>
+
+            <a href="#" class="header__link">
+                <i class="ri-history-line"></i> Mis Pedidos
+            </a>
+
+            <a href="#" class="header__link">
+                <i class="ri-shopping-cart-2-line"></i> Mi Carrito
+            </a>
+
+            <!-- Separador -->
+            <hr class="header__divider">
+
+            <!-- Login -->
+            <a href="#" id="itemLoginMobile" class="header__link">
+                <i class="ri-login-circle-line"></i> Iniciar Sesión
+            </a>
+
+            <!-- Logout -->
+            <a href="#" id="itemLogoutMobile" class="header__link header__link--logout">
+                <i class="ri-logout-box-r-line"></i> Cerrar Sesión
+            </a>
+
+        </nav>
+
     </header>
+
+    <!-- Script -->
+    <script src="../js/MainPage.js"></script>
+
 </body>
 </html>
