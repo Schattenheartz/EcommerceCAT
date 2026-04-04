@@ -1,0 +1,47 @@
+.search {
+    display: flex;
+    align-items: center;
+
+    border: 1.5px solid #d1d9e0;
+    border-radius: var(--radius-pill);
+    padding: 5px 15px;
+
+    background: var(--color-white);
+    transition: 0.3s;
+}
+
+.search:focus-within {
+    border-color: #00aaff;
+    box-shadow: 0 0 8px rgba(0,170,255,0.2);
+}
+
+.search__input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: none;
+    padding: 8px;
+}
+
+/* ICONO GENERAL */
+.search__icon {
+    font-size: 1.2rem;
+    color: var(--color-text);
+}
+
+/* BOTÓN VOZ (PRO) */
+.search__voice-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.search__voice-icon {
+    font-size: 1.2rem;
+    color: var(--color-text);
+}
+
+/* ESTADOS */
+.search__voice-btn:hover .search__voice-icon {
+    color: var(--color-hover);
+}

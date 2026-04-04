@@ -1,0 +1,30 @@
+@media (max-width: 768px) {
+
+    .header__search {
+        display: none;
+    }
+
+    .header__actions {
+        display: none;
+    }
+
+    .header__toggle {
+        display: block;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .header__brand {
+        font-size: 1.6rem;
+    }
+
+    .search__voice-btn {
+        display: none;
+    }
+
+    .user-menu {
+        width: 200px;
+        right: -10px;
+    }
+}

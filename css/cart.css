@@ -1,0 +1,35 @@
+.cart {
+    position: relative;
+}
+
+.cart__button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.cart__icon {
+    font-size: 1.6rem;
+}
+
+.cart__badge {
+    position: absolute;
+    top: -6px;
+    right: -8px;
+
+    background: var(--color-primary);
+    color: white;
+
+    font-size: 0.7rem;
+    font-weight: bold;
+
+    height: 18px;
+    min-width: 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+}
